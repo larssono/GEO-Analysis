@@ -1,6 +1,0 @@
-CONFIG_FILE=config_test2.sh
-
-./$CONFIG_FILE
-
-./1full_single_process_sar_to_count.sh test2 _____.fastq
-
