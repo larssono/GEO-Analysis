@@ -1,7 +1,0 @@
-DIR_FASTQ=$1
-PATH_SRA=$2
-VER_SRA_TOOLKIT=$3
-
-module load sratoolkit/$VER_SRA_TOOLKIT
-
-fastq-dump -I --split-files $PATH_SRA -O $DIR_FASTQ

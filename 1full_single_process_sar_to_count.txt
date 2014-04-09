@@ -1,0 +1,8 @@
+ABBR_NAME=$1
+SAR_FILE_NAME=$2
+
+./2sar_to_fastq.sh
+
+./3fastq_to_bam.sh
+
+./4bam_to_count.sh

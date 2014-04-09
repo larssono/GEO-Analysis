@@ -1,0 +1,8 @@
+CONFIG_FILE=config_test3.sh
+
+./$CONFIG_FILE
+
+./1full_single_process_sar_to_count.sh test3_a _____.fastq
+./1full_single_process_sar_to_count.sh test3_b _____.fastq
+
+./5count_to_diff.sh
