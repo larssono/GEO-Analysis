@@ -1,3 +1,7 @@
+## Input variables
+
+## Derived variables
+
 DIR_IN=/external-data/DAT_114__PCBC_Data/mRNA
 DIR_FASTQ=$DIR_IN/fastq
 DIR_WORK=/work/DAT_114__PCBC_Data
@@ -22,7 +26,11 @@ cd $DIR_WORK
 
 PATH_SAM=$DIR_TEMP\Aligned.out.sam
 
+## Running STAR
+
 $PATH_STAR --runThreadN 8 --genomeDir $GENOME_IDX --outFileNamePrefix $DIR_TEMP --outSAMunmapped Within --readFilesCommand gunzip --readFilesIn $PATH_FASTQ
+
+## Running samtools
 
 module load samtools/$VER_SAMTOOLS
 samtools view -b -S $PATH_SAM -t $PATH_NAME_LENGTH_REF > $PATH_BAM
