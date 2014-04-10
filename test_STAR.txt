@@ -1,0 +1,28 @@
+DIR_IN=/external-data/DAT_114__PCBC_Data/mRNA
+DIR_FASTQ=$DIR_IN/fastq
+DIR_WORK=/work/DAT_114__PCBC_Data
+DIR_OUT=$DIR_WORK/Results
+FILE_FASTQ=run0102_lane2_read1_index5\=H9-P37T7-1.fastq.gz
+DIR_BAM=$DIR_OUT/bam
+#DIR_WORK=$2
+GENOME_IDX=/external-data/Genome/indicies/Hsapiens_UCSC_hg19_STAR/hg19_Gencode19
+#GENOME_MDL=$4
+ID_SAMPLE=H9.102.2.5_test
+PATH_BAM=$DIR_BAM/$ID_SAMPLE.bam
+PATH_FASTQ=$DIR_FASTQ/$FILE_FASTQ
+VER_STAR=2.3.0e
+#VER_TOPHAT=$8
+VER_SAMTOOLS=0.1.19
+PATH_NAME_LENGTH_REF=$GENOME_IDX/chrNameLength.txt
+
+
+DIR_TEMP=$DIR_WORK/temp/$ID_SAMPLE\_
+PATH_STAR=/home/apratap/softwares/STAR_$VER_STAR/STAR
+cd $DIR_WORK
+
+PATH_SAM=$DIR_TEMP\Aligned.out.sam
+
+$PATH_STAR --runThreadN 8 --genomeDir $GENOME_IDX --outFileNamePrefix $DIR_TEMP --outSAMunmapped Within --readFilesCommand gunzip --readFilesIn $PATH_FASTQ
+
+module load samtools/$VER_SAMTOOLS
+samtools view -b -S $PATH_SAM -t $PATH_NAME_LENGTH_REF > $PATH_BAM
