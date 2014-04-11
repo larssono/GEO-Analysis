@@ -1,0 +1,8 @@
+DIR_SCRIPT=
+/work/DAT_114__PCBC_Data/Scripts
+SHELL_FASTQ_TO_COUNT=$DIR_SCRIPT/B0_process_file_fastq_to_count.sh
+
+
+
+$SHELL_FASTQ_TO_COUNT $DIR_SCRIPT 1config_fastq_to_count_by_tophat.sh H9.102.2.5 run0102_lane2_read1_index5\=H9-P37T7-1.fastq.gz
+

@@ -1,0 +1,9 @@
+######## Load configuration file
+$DIR_SCRIPT/$FILE_CONFIG $1 $2 $3 $4
+
+######## Provenance of input file
+
+######## Run Scripts (see configuration file for script names - D and E)
+
+$SHELL_FASTQ_TO_BAM
+$SHELL_BAM_TO_COUNT
