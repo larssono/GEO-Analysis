@@ -1,5 +1,4 @@
-DIR_SCRIPT=
-/work/DAT_114__PCBC_Data/Scripts
+DIR_SCRIPT=/work/DAT_114__PCBC_Data/Scripts
 SHELL_FASTQ_TO_COUNT=$DIR_SCRIPT/B0_process_file_fastq_to_count.sh
 
 

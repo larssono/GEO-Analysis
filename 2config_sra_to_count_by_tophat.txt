@@ -23,22 +23,17 @@ export VER_TOPHAT=2.0.9
 #DIR_IN=/external-data/DAT_114__PCBC_Data/mRNA
 #DIR_WORK=/work/DAT_114__PCBC_Data
 
-#DIR_OUT=/work/DAT_114__PCBC_Data
-/Results
+#DIR_OUT=/work/DAT_114__PCBC_Data/Results
 
 
-export DIR_TEMP=/work/DAT_114__PCBC_Data
-/temp/$ID_SAMPLE
+export DIR_TEMP=/work/DAT_114__PCBC_Data/temp/$ID_SAMPLE
 
 export DIR_SRA=/external-data ################################################################## fix
-export DIR_FASTQ=/work/DAT_114__PCBC_Data
-/Results/fastq
+export DIR_FASTQ=/work/DAT_114__PCBC_Data/Results/fastq
 
-export DIR_BAM=/work/DAT_114__PCBC_Data
-/Results/bam
+export DIR_BAM=/work/DAT_114__PCBC_Data/Results/bam
 
-export 
-GENOME_IDX=/external-data/Genome/indicies/Hsapiens_UCSC_hg19_Bowtie2/genome
+export GENOME_IDX=/external-data/Genome/indicies/Hsapiens_UCSC_hg19_Bowtie2/genome
 export GENOME_MDL=/external-data/Genome/gene_models/Hsapiens_UCSC_hg19.gtf
 
 #### Derived
@@ -51,8 +46,7 @@ export SHELL_BAM_TO_COUNT=$DIR_SCRIPT/Ebam_to_count.sh
 #### Transient
 export FILE_SRA=$ID_SAMPLE.sra
 
-export DIR_COUNT=/work/DAT_114__PCBC_Data
-/Results/count/$ID_SAMPLE
+export DIR_COUNT=/work/DAT_114__PCBC_Data/Results/count/$ID_SAMPLE
 
 export PATH_SRA=$DIR_SRA/$FILE_SRA
 export PATH_FASTQ=$DIR_FASTQ/$FILE_FASTQ

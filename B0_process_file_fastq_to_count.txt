@@ -1,5 +1,5 @@
 ######## Load configuration file
-$DIR_SCRIPT/$FILE_CONFIG $1 $2 $3 $4
+source $DIR_SCRIPT/$FILE_CONFIG $1 $2 $3 $4
 
 ######## Provenance of input file
 
