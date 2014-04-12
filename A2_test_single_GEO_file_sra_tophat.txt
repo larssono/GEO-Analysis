@@ -1,6 +1,0 @@
-DIR_SCRIPT=/work/DAT_114__PCBC_Data/Scripts
-
-SHELL_SRA_TO_COUNT=$DIR_SCRIPT/B1_process_file_sra_to_count.sh
-
-$SHELL_SRA_TO_COUNT $DIR_SCRIPT 2config_sra_to_count_by_tophat.sh SRR445718
-

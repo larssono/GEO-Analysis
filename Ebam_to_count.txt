@@ -2,7 +2,6 @@
 module load samtools/$VER_SAMTOOLS
 samtools index $PATH_BAM
 
-
 cd $DIR_COUNT
 
 module load cufflinks/$VER_CUFFLINKS

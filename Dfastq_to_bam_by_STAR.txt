@@ -1,19 +1,10 @@
-DIR_BAM_=$1
-DIR_WORK=$2
-GENOME_IDX=$3
-GENOME_MDL=$4
-ID_SAMPLE=$5
-PATH_BAM=$6
-PATH_FASTQ=$7
-VER_TOPHAT=$8
+## Running STAR
 
-DIR_TEMP=$DIR_WORK/temp/$ID_SAMPLE
+$PATH_STAR --runThreadN 8 --genomeDir $GENOME_IDX --outFileNamePrefix $DIR_TEMP --outSAMunmapped Within --readFilesCommand gunzip --readFilesIn $PATH_FASTQ
 
-cd $DIR_WORK
-#rm $DIR_TEMP -r
+## Running samtools
 
-module load tophat/$VER_TOPHAT
-echo tophat -o $DIR_TEMP -p 8 -G $GENOME_MDL $GENOME_IDX $PATH_FASTQ
-tophat -o $DIR_TEMP -p 8 -G $GENOME_MDL $GENOME_IDX $PATH_FASTQ
+module load samtools/$VER_SAMTOOLS
+samtools view -b -S $PATH_SAM -t $PATH_NAME_LENGTH_REF > $PATH_BAM
 
-mv $DIR_TEMP/accepted_hits.bam $PATH_BAM
+## Provenance …
