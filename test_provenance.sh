@@ -18,9 +18,7 @@ ACTIVITY_DESCRIPTION=
 PROGRAM_NAME=
 PROGRAM_VERSION=
 
-echo $ENTITY_PATH
 ######## Save provenance (input file - sar)
-echo ./create_provenance.sh -an "$ACTIVITY_NAME" -ep "$ENTITY_PATH" -fn "$FOLDER_NAME" -pn "$PROJECT_NAME"
 ./create_provenance.sh -an "$ACTIVITY_NAME" -ep "$ENTITY_PATH" -fn "$FOLDER_NAME" -pn "$PROJECT_NAME"
 
 #./create_provenance.sh -ad $ACTIVITY_DESCRIPTION -an $ACTIVITY_NAME -ed $ENTITY_DESCRIPTION -ep $ENTITY_PATH -fn $FOLDER_NAME -pn $PROJECT_NAME -progn $PROGRAM_NAME -progv $PROGRAM_VERSION
