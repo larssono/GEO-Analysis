@@ -3,7 +3,7 @@
 # that sets system variables used by the rest of the processing scripts.
 
 # The assumed process uses tophat to convert a fastq to bam
-# then uses cufflinks to convert the bam to ___
+# then uses cufflinks to comvert the bam to ___
 
 #### Input
 
@@ -28,6 +28,7 @@ export GENOME_MDL=/external-data/Genome/gene_models/Hsapiens_UCSC_hg19.gtf
 
 #### Derived
 
+export SHELL_FASTQ_TO_COUNT=$DIR_SCRIPT/B_process_single_file.sh
 export SHELL_SRA_TO_FASTQ=echo\ No\ need\ to\ convert\ SRA\ to\ FASTQ\ \-\ step\ skipped
 export SHELL_FASTQ_TO_BAM=$DIR_SCRIPT/Dfastq_to_bam_by_tophat.sh 
 export SHELL_BAM_TO_COUNT=$DIR_SCRIPT/Ebam_to_count.sh

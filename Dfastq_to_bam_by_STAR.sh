@@ -1,3 +1,6 @@
+mkdir -p $DIR_SAM
+mkdir -p $DIR_BAM
+
 ## Running STAR
 
 $PATH_STAR --runThreadN 8 --genomeDir $GENOME_IDX --outFileNamePrefix $DIR_TEMP --outSAMunmapped Within --readFilesCommand gunzip --readFilesIn $PATH_FASTQ

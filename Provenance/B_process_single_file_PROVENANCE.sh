@@ -3,7 +3,7 @@
 ######## Load configuration fileS
 
 source $1 $1 $2 $3
-source $4
+source $4 $5
 
 ######## Run Scripts (see configuration file for script names - C, D, and E)
 
@@ -26,8 +26,7 @@ echo
 #IN_SYNAPSE=0
 
 #### Save provenance (input file - sar)
-echo Saving input provenance is currently disabled
-#$DIR_SCRIPT_PROV/create_provenance.sh -an "$B_ACTIVITY_NAME" -ep "$PATH_SRA" -fn "$SYN_DIR_SRA" -pn "$SYN_PROJECT_NAME" #-store_in_synapse $IN_SYNAPSE
+$DIR_SCRIPT_PROV/create_provenance.sh -an "$B_ACTIVITY_NAME" -ep "$B_ENTITY_PATH" -ed "$B_ENTITY_DESC" -fn "$B_SYN_DIR" -pn "$SYN_PROJECT_NAME" $B_UPLOAD
 
 
 ######## Provenance of process
