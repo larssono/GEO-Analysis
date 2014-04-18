@@ -15,6 +15,7 @@ export FILE_SRA=$3
 
 export DIR_SCRIPT=/work/DAT_114__PCBC_Data/Scripts
 #export DIR_TEMP=/work/DAT_114__PCBC_Data/temp/$ID_SAMPLE
+export DIR_SAM=/work/DAT_114__PCBC_Data/Results/sam
 export DIR_SRA=/external-data/DAT_114__PCBC_Data/GEO
 export DIR_FASTQ=/work/DAT_114__PCBC_Data/Results/fastq
 export DIR_BAM=/work/DAT_114__PCBC_Data/Results/bam
@@ -44,13 +45,16 @@ export PATH_STAR=$DIR_STAR/STAR
 export DIR_COUNT=/work/DAT_114__PCBC_Data/Results/count/$ID_SAMPLE
 
 export FILE_FASTQ=$ID_SAMPLE\_1.fastq
+export FILE_SAM=$ID_SAMPLE.Aligned.out.sam
 export FILE_BAM=$ID_SAMPLE.bam
 export FILE_COUNT_1=isoforms.fpkm_tracking
 export FILE_COUNT_2=genes.fpkm_tracking
 
+export PREFIX_SAM=$DIR_SAM/$ID_SAMPLE.
+
 export PATH_SRA=$DIR_SRA/$FILE_SRA
 export PATH_FASTQ=$DIR_FASTQ/$FILE_FASTQ
-export PATH_SAM=$DIR_TEMP\Aligned.out.sam
+export PATH_SAM=$DIR_SAM/$FILE_SAM
 export PATH_BAM=$DIR_BAM/$FILE_BAM
-export PATH_COUNT_1=$DIR_COUNT/$FILE_COUNT
-export PATH_COUNT_2=$DIR_COUNT/$FILE_COUNT
+export PATH_COUNT_1=$DIR_COUNT/$FILE_COUNT_1
+export PATH_COUNT_2=$DIR_COUNT/$FILE_COUNT_2
