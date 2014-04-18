@@ -3,7 +3,7 @@
 ######## Load configuration fileS
 
 source $1 $1 $2 $3
-source $4 $5
+source $4 $5 $1 
 
 ######## Run Scripts (see configuration file for script names - C, D, and E)
 
@@ -26,13 +26,13 @@ echo
 #IN_SYNAPSE=0
 
 #### Save provenance (input file - sar)
-$DIR_SCRIPT_PROV/create_provenance.sh -an "$B_ACTIVITY_NAME" -ep "$B_ENTITY_PATH" -ed "$B_ENTITY_DESC" -fn "$B_SYN_DIR" -pn "$SYN_PROJECT_NAME" $B_UPLOAD
+$DIR_SCRIPT_PROV/create_provenance.sh -an "$B_ACTIVITY_NAME" -en "$B_ENTITY_NAME" -ep "$B_ENTITY_PATH" -ed "$B_ENTITY_DESC" -fn "$B_SYN_DIR" -pn "$SYN_PROJECT_NAME" $B_UPLOAD
 
 
 ######## Provenance of process
-$DIR_SCRIPT_PROV_C
-$DIR_SCRIPT_PROV_D
-$DIR_SCRIPT_PROV_E
+$SHELL_PROCESS_PROV_C
+$SHELL_PROCESS_PROV_D
+$SHELL_PROCESS_PROV_E
 
 #Original processing code
 #

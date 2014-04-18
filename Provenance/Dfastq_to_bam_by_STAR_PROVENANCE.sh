@@ -13,5 +13,5 @@
 #
 ## Provenance 
 
-echo $DIR_SCRIPT_PROV/create_provenance.sh -an "$D_ACTIVITY_NAME" -ad "$D_ACTIVITY_DESC" -ep "$D_ENTITY_PATH" -fn "$D_SYN_DIR" -pn "$SYN_PROJECT_NAME" -progn $D_SYN_ID_OF_PROGRAM -progv $D_SYN_VER_OF_PROGRAM -uses $D_USES $D_UPLOAD
-$DIR_SCRIPT_PROV/create_provenance.sh -an "$D_ACTIVITY_NAME" -ad "$D_ACTIVITY_DESC" -ep "$D_ENTITY_PATH" -fn "$D_SYN_DIR" -pn "$SYN_PROJECT_NAME" -progn $D_SYN_ID_OF_PROGRAM -progv $D_SYN_VER_OF_PROGRAM -uses $D_USES $D_UPLOAD
+echo $DIR_SCRIPT_PROV/create_provenance.sh -an "$D_ACTIVITY_NAME" -ad "$D_ACTIVITY_DESC" -en "$D_ENTITY_NAME" -ep "$D_ENTITY_PATH" -fn "$D_SYN_DIR" -pn "$SYN_PROJECT_NAME" -progn $D_SYN_ID_OF_PROGRAM -progv $D_SYN_VER_OF_PROGRAM -uses $D_USES $D_UPLOAD
+$DIR_SCRIPT_PROV/create_provenance.sh -an "$D_ACTIVITY_NAME" -ad "$D_ACTIVITY_DESC" -en "$D_ENTITY_NAME" -ep "$D_ENTITY_PATH" -fn "$D_SYN_DIR" -pn "$SYN_PROJECT_NAME" -progn $D_SYN_ID_OF_PROGRAM -progv $D_SYN_VER_OF_PROGRAM -uses $D_USES $D_UPLOAD

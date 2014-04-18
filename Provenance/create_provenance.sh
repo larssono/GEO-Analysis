@@ -17,6 +17,7 @@ def parse_args():
     parser.add_argument("-fn", metavar="FOLDER_NAME")
     parser.add_argument("-ep", metavar="ENTITY_PATH")#, type=argparse.FileType('r'))
     parser.add_argument("-ed", metavar="ENTITY_DESCRIPTION")
+    parser.add_argument("-en", metavar="ENTITY_NAME")
     parser.add_argument("-an", metavar="ACTIVITY_NAME")
     parser.add_argument("-ad", metavar="ACTIVITY_DESCRIPTION")
     parser.add_argument("-progn", metavar="SYN_ID_OF_PROGRAM", nargs='+')
@@ -62,7 +63,7 @@ def get_file_ent(syn, folder_ent, file_name):
 def save_file_to_synapse(syn, syn_folder, args):
     file_path = str(args.ep)
     if args.upload: print "uploading " + file_path
-    file_entity = File(file_path, description=args.ed, parent=syn_folder, synapseStore=args.upload)
+    file_entity = File(file_path, name=args.en, description=args.ed, parent=syn_folder, synapseStore=args.upload)
     file_entity = syn.store(file_entity)
     return file_entity
 
@@ -100,16 +101,18 @@ def display_test(entity_desc, entity):
 ### main
 def main():
 	args = parse_args()
-	print "Project Name: " + str(args.pn)
-	print "Folder Name: " + str(args.fn)
-	print "Entity Path: " + str(args.ep)
-	print "Entity Description: " + str(args.ed)
-	print "Activity Name: " + str(args.an)
-	print "Activity Description: " + str(args.ad)
-	print "Program Name(s): " + str(args.progn)
-	print "Program Ver(s): " + str(args.progv)
-	print "File(s) Used: " + str(args.uses)
-	#print "Store in Synapse: " + str(args.store_in_synapse)
+	print "* PARAMETERS USED IN create_provenance"
+	print "* Project Name: " + str(args.pn)
+	print "* Folder Name: " + str(args.fn)
+	print "* Entity Name: " + str(args.en)
+	print "* Entity Path: " + str(args.ep)
+	print "* Entity Description: " + str(args.ed)
+	print "* Activity Name: " + str(args.an)
+	print "* Activity Description: " + str(args.ad)
+	print "* Program Name(s): " + str(args.progn)
+	print "* Program Ver(s): " + str(args.progv)
+	print "* File(s) Used: " + str(args.uses)
+	print "* Upload?: " + str(args.upload)
 	
 	syn = synapseclient.Synapse()
 	syn.login()
